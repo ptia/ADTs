@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class LinkedBSTTest {
+public class LinkedBSTSerialTest {
 
   LinkedBST<Integer> bst;
 

@@ -6,77 +6,84 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
   private Position find(T obj) {
     Node parent = null;
     Node current = root;
+    Side side = Side.ROOT;
     while (current != null) {
       switch (obj.compareTo(current.obj)) {
         case -1:
           parent = current;
           current = current.left;
+          side = Side.LEFT;
           break;
         case 0:
-          return new Position(parent, current);
+          return new Position(parent, current, side);
         case 1:
           parent = current;
           current = current.right;
+          side = Side.RIGHT;
           break;
       }
     }
-    return new Position(parent, null);
+    return new Position(parent, null, side);
   }
 
   private Position findMin(Position start) {
     if (start.current == null) {
-      return new Position(null, null);
+      return new Position(null, null, Side.ROOT);
     }
     Node parent = start.parent;
     Node current = start.current;
+    Side side = start.side;
     while (current.left != null) {
       parent = current;
       current = current.left;
+      side = Side.LEFT;
     }
-    return new Position(parent, current);
+    return new Position(parent, current, side);
   }
 
   private Position findMax(Position start) {
     if (start.current == null) {
-      return new Position(null, null);
+      return new Position(null, null, Side.ROOT);
     }
     Node parent = start.parent;
     Node current = start.current;
+    Side side = start.side;
     while (current.right != null) {
       parent = current;
       current = current.right;
+      side = Side.RIGHT;
     }
-    return new Position(parent, current);
+    return new Position(parent, current, side);
   }
 
   @Override
-  public boolean add(T obj) {
+  public synchronized boolean add(T obj) {
     Position pos = find(obj);
     if (pos.current != null) {
       return false;
     }
     Node newNode = new Node(obj);
-    if (pos.parent != null) {
-      switch (obj.compareTo(pos.parent.obj)) {
-        case -1:
-          pos.parent.left = newNode;
-          break;
-        case 1:
-          pos.parent.right = newNode;
-      }
-    } else {
-      root = newNode;
+    switch (pos.side) {
+      case ROOT:
+        root = newNode;
+        break;
+      case LEFT:
+        pos.parent.left = newNode;
+        break;
+      case RIGHT:
+        pos.parent.right = newNode;
+        break;
     }
     return true;
   }
 
   @Override
-  public boolean contains(T obj) {
+  public synchronized boolean contains(T obj) {
     return find(obj).foundExact();
   }
 
   @Override
-  public boolean remove(T obj) {
+  public synchronized boolean remove(T obj) {
     Position pos = find(obj);
     if (!pos.foundExact()) {
       return false;
@@ -94,28 +101,29 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
     } else if (pos.current.right == null) {
       newCurrent = pos.current.left;
     } else {
-      Position posMaxLeft = findMax(new Position(pos.current, pos.current.left));
+      Position posMaxLeft =
+          findMax(new Position(pos.current, pos.current.left, Side.LEFT));
       remove(posMaxLeft);
       newCurrent =
           new Node(posMaxLeft.current.obj, pos.current.left, pos.current.right);
     }
 
-    if (pos.isRoot()) {
-      root = newCurrent;
-    } else {
-      switch (pos.current.obj.compareTo(pos.parent.obj)) {
-        case -1:
-          pos.parent.left = newCurrent;
-          break;
-        case 1:
-          pos.parent.right = newCurrent;
-      }
+    switch (pos.side) {
+      case ROOT:
+        root = newCurrent;
+        break;
+      case LEFT:
+        pos.parent.left = newCurrent;
+        break;
+      case RIGHT:
+        pos.parent.right = newCurrent;
+        break;
     }
   }
 
   @Override
-  public Optional<T> getMin() {
-    Position pos = findMin(new Position(null, root));
+  public synchronized Optional<T> getMin() {
+    Position pos = findMin(new Position(null, root, Side.ROOT));
     if (!pos.foundExact()) {
       return Optional.empty();
     }
@@ -123,8 +131,8 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
   }
 
   @Override
-  public Optional<T> getMax() {
-    Position pos = findMax(new Position(null, root));
+  public synchronized Optional<T> getMax() {
+    Position pos = findMax(new Position(null, root, Side.ROOT));
     if (!pos.foundExact()) {
       return Optional.empty();
     }
@@ -132,13 +140,13 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
   }
 
   @Override
-  public boolean isEmpty() {
+  public synchronized boolean isEmpty() {
     return root == null;
   }
 
   @Override
-  public String toString() {
-    if (root == null) {
+  public synchronized String toString() {
+    if (isEmpty()) {
       return "<empty>\n";
     }
     StringBuilder sb = new StringBuilder();
@@ -160,16 +168,23 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
 
   private class Position {
     private final Node parent, current;
-    private Position(Node parent, Node current) {
+    private final Side side;
+    private Position(Node parent, Node current, Side side) {
+      assert (parent == null) == (side == Side.ROOT);
       this.parent = parent;
       this.current = current;
+      this.side = side;
     }
     private boolean foundExact() {
       return current != null;
     }
     private boolean isRoot() {
-      return parent == null;
+      return side == Side.ROOT;
     }
+  }
+
+  private enum Side {
+    LEFT, RIGHT, ROOT
   }
 
   private class Node {
