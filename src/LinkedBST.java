@@ -78,35 +78,39 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
   @Override
   public boolean remove(T obj) {
     Position pos = find(obj);
-    Node newCurrent;
-
     if (!pos.foundExact()) {
       return false;
     }
+    remove(pos);
+    return true;
+  }
 
+  private void remove(Position pos) {
+    assert pos.foundExact();
+
+    Node newCurrent;
     if (pos.current.left == null) {
       newCurrent = pos.current.right;
     } else if (pos.current.right == null) {
       newCurrent = pos.current.left;
     } else {
       Position posMaxLeft = findMax(new Position(pos.current, pos.current.left));
-      posMaxLeft.parent.right = null;
-      newCurrent = posMaxLeft.current;
+      remove(posMaxLeft);
+      newCurrent =
+          new Node(posMaxLeft.current.obj, pos.current.left, pos.current.right);
     }
 
     if (pos.isRoot()) {
       root = newCurrent;
     } else {
-      switch (obj.compareTo(pos.parent.obj)) {
+      switch (pos.current.obj.compareTo(pos.parent.obj)) {
         case -1:
           pos.parent.left = newCurrent;
           break;
         case 1:
           pos.parent.right = newCurrent;
-          break;
       }
     }
-    return true;
   }
 
   @Override
@@ -127,6 +131,33 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
     return Optional.of(pos.current.obj);
   }
 
+  @Override
+  public boolean isEmpty() {
+    return root == null;
+  }
+
+  @Override
+  public String toString() {
+    if (root == null) {
+      return "<empty>\n";
+    }
+    StringBuilder sb = new StringBuilder();
+    toStringHelper(sb, root, 0);
+    return sb.toString();
+  }
+
+  private void toStringHelper(StringBuilder sb, Node node, int depth) {
+    if (node.right != null) {
+      toStringHelper(sb, node.right, depth + 1);
+    }
+    sb.append("\t".repeat(depth));
+    sb.append(node.obj);
+    sb.append('\n');
+    if (node.left != null) {
+      toStringHelper(sb, node.left, depth + 1);
+    }
+  }
+
   private class Position {
     private final Node parent, current;
     private Position(Node parent, Node current) {
@@ -145,7 +176,12 @@ public class LinkedBST<T extends Comparable<T>> implements BST<T>{
     private Node left, right;
     private final T obj;
     private Node(T obj) {
+      this(obj, null, null);
+    }
+    private Node(T obj, Node left, Node right) {
       this.obj = obj;
+      this.left = left;
+      this.right = right;
     }
   }
 }

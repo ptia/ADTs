@@ -6,4 +6,5 @@ public interface BST<T extends Comparable<T>> {
   boolean remove(T obj);
   Optional<T> getMin();
   Optional<T> getMax();
+  boolean isEmpty();
 }

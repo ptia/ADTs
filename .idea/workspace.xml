@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="504c7b44-458c-41b4-b9aa-294b052d9a6a" name="Default Changelist" comment="" />
+    <list default="true" id="504c7b44-458c-41b4-b9aa-294b052d9a6a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADTs/BST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADTs/LinkedBST$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADTs/LinkedBST$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADTs/LinkedBST$Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADTs/LinkedBST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADTs/LinkedBSTTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedBSTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedBSTTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,23 +31,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="4" />
           <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="4" />
           <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="java" value="7337" />
+          <entry key="java" value="9398" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7337" />
+          <entry key="JAVA" value="9398" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -49,22 +63,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedBST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+            <state relative-caret-position="810">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
               <folding>
-                <element signature="method#find#0;class#LinkedBST#0" />
                 <element signature="method#findMin#0;class#LinkedBST#0" />
                 <element signature="method#findMax#0;class#LinkedBST#0" />
                 <element signature="method#add#0;class#LinkedBST#0" />
+                <element signature="e#1653#1654#0" expanded="true" />
+                <element signature="e#1692#1693#0" expanded="true" />
                 <element signature="method#remove#0;class#LinkedBST#0" />
+                <element signature="method#remove#1;class#LinkedBST#0" />
                 <element signature="method#getMin#0;class#LinkedBST#0" />
                 <element signature="method#getMax#0;class#LinkedBST#0" />
+                <element signature="e#3656#3657#0" expanded="true" />
+                <element signature="e#3685#3686#0" expanded="true" />
+                <element signature="method#toStringHelper#0;class#LinkedBST#0" />
+                <element signature="class#Position#0;class#LinkedBST#0" />
                 <element signature="e#3239#3240#0" expanded="true" />
                 <element signature="e#3275#3276#0" expanded="true" />
                 <element signature="e#3306#3307#0" expanded="true" />
                 <element signature="e#3341#3342#0" expanded="true" />
-                <element signature="e#3450#3451#0" expanded="true" />
-                <element signature="e#3478#3479#0" expanded="true" />
+                <element signature="class#Node#0;class#LinkedBST#0" />
+                <element signature="e#4668#4669#0" expanded="true" />
+                <element signature="e#4685#4686#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedBSTTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+            <state relative-caret-position="265">
+              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            <state relative-caret-position="120">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -118,10 +139,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="-15" />
-    <option name="width" value="674" />
-    <option name="height" value="753" />
+    <option name="x" value="-1" />
+    <option name="y" value="-22" />
+    <option name="width" value="1368" />
+    <option name="height" value="767" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -153,15 +174,16 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551666265710" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551670931852" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="/usr/share/java/hamcrest-core.jar!/" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -183,11 +205,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedBSTTest">
+  <component name="RunManager" selected="JUnit.LinkedBSTTest.remove">
     <configuration name="LinkedBSTTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ADTs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedBSTTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedBSTTest.bstToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ADTs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedBSTTest" />
+      <option name="METHOD_NAME" value="bstToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedBSTTest.buildBST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ADTs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedBSTTest" />
+      <option name="METHOD_NAME" value="buildBST" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedBSTTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ADTs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedBSTTest" />
+      <option name="METHOD_NAME" value="remove" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,10 +257,16 @@
     <list>
       <item itemvalue="JUnit.LinkedBSTTest.test" />
       <item itemvalue="JUnit.LinkedBSTTest" />
+      <item itemvalue="JUnit.LinkedBSTTest.bstToString" />
+      <item itemvalue="JUnit.LinkedBSTTest.buildBST" />
+      <item itemvalue="JUnit.LinkedBSTTest.remove" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedBSTTest.remove" />
+        <item itemvalue="JUnit.LinkedBSTTest.buildBST" />
         <item itemvalue="JUnit.LinkedBSTTest" />
+        <item itemvalue="JUnit.LinkedBSTTest.bstToString" />
         <item itemvalue="JUnit.LinkedBSTTest.test" />
       </list>
     </recent_temporary>
@@ -227,36 +285,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedBSTTest_test - 2019.03.04 at 03h 00m 37s.xml">
-      <configuration name="LinkedBSTTest.test" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 19m 15s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest_test - 2019.03.04 at 03h 01m 29s.xml">
-      <configuration name="LinkedBSTTest.test" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 19m 28s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest_test - 2019.03.04 at 03h 02m 58s.xml">
-      <configuration name="LinkedBSTTest.test" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 19m 33s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest_test - 2019.03.04 at 03h 06m 03s.xml">
-      <configuration name="LinkedBSTTest.test" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 24m 42s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest_test - 2019.03.04 at 03h 06m 06s.xml">
-      <configuration name="LinkedBSTTest.test" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 25m 11s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest - 2019.03.04 at 03h 08m 55s.xml">
-      <configuration name="LinkedBSTTest" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 41m 26s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest - 2019.03.04 at 03h 11m 01s.xml">
-      <configuration name="LinkedBSTTest" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 41m 52s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest - 2019.03.04 at 03h 11m 30s.xml">
-      <configuration name="LinkedBSTTest" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 41m 57s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedBSTTest - 2019.03.04 at 03h 11m 54s.xml">
-      <configuration name="LinkedBSTTest" configurationId="JUnit" />
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 42m 02s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBSTTest_remove - 2019.03.04 at 04h 42m 13s.xml">
+      <configuration name="LinkedBSTTest.remove" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="-15" width="674" height="753" extended-state="0" />
+    <frame x="-1" y="-22" width="1368" height="767" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -264,16 +325,16 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" sideWeight="0.5015432" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49845678" visible="true" weight="0.52715653" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49845678" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.32921174" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287037" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39969134" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32766616" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39876354" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -291,17 +352,38 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar:///usr/share/java/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/share/java/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="59" column="71" selection-start-line="59" selection-start-column="71" selection-end-line="59" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/share/java/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedBSTTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="265">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -310,22 +392,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedBST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        <state relative-caret-position="810">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
           <folding>
-            <element signature="method#find#0;class#LinkedBST#0" />
             <element signature="method#findMin#0;class#LinkedBST#0" />
             <element signature="method#findMax#0;class#LinkedBST#0" />
             <element signature="method#add#0;class#LinkedBST#0" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1692#1693#0" expanded="true" />
             <element signature="method#remove#0;class#LinkedBST#0" />
+            <element signature="method#remove#1;class#LinkedBST#0" />
             <element signature="method#getMin#0;class#LinkedBST#0" />
             <element signature="method#getMax#0;class#LinkedBST#0" />
+            <element signature="e#3656#3657#0" expanded="true" />
+            <element signature="e#3685#3686#0" expanded="true" />
+            <element signature="method#toStringHelper#0;class#LinkedBST#0" />
+            <element signature="class#Position#0;class#LinkedBST#0" />
             <element signature="e#3239#3240#0" expanded="true" />
             <element signature="e#3275#3276#0" expanded="true" />
             <element signature="e#3306#3307#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
-            <element signature="e#3450#3451#0" expanded="true" />
-            <element signature="e#3478#3479#0" expanded="true" />
+            <element signature="class#Node#0;class#LinkedBST#0" />
+            <element signature="e#4668#4669#0" expanded="true" />
+            <element signature="e#4685#4686#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -370,7 +459,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
